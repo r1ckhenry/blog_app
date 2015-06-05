@@ -1,0 +1,9 @@
+<div><%= link_to('Add post', new_post_path) %></div>
+
+
+<ul>
+<% @posts.each do |post| %>
+  <h1><%= link_to(post.title, post_path(post)) %></h1>
+  <h5><%= post.author %></h5>
+<% end %>
+</ul>
